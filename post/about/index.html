@@ -1,0 +1,184 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About | Zhenyu Zhao&#39;s Data Lab</title>
+<link rel="shortcut icon" href="https://peakzzy.github.io/favicon.ico?v=1657896576131">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://peakzzy.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="About | Zhenyu Zhao&#39;s Data Lab - Atom Feed" href="https://peakzzy.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+Welcome to my knowledge sharing house, nice to meet you! 🤝
+
+🏠 About the site
+👨‍💻 Who is me
+🎓 Bachelor in Statistic..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://peakzzy.github.io">
+  <img class="avatar" src="https://peakzzy.github.io/images/avatar.png?v=1657896576131" alt="">
+  </a>
+  <h1 class="site-title">
+    Zhenyu Zhao&#39;s Data Lab
+  </h1>
+  <p class="site-description">
+    Hi, This is Zhenyu Zhao, or you can also call me Peak. This is my test field for data science works. Hope you can find something useful here.
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          Home
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          Archives
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          Tags
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          About
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              About
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-07-15
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <blockquote>
+<p>Welcome to my knowledge sharing house, nice to meet you! 🤝</p>
+</blockquote>
+<h2 id="about-the-site">🏠 About the site</h2>
+<h2 id="who-is-me">👨‍💻 Who is me</h2>
+<p>🎓 Bachelor in Statistics at <a href="https://en.cufe.edu.cn/">Central University of Finance and Economics</a><br>
+🎓 Master in Statistics at <a href="https://www.uu.se/en">Uppsala Universitet</a></p>
+<h2 id="interests">⛹ Interests</h2>
+<p>📖 Statistics, Data science and Medical science<br>
+🏄‍♀ Football, Basketball, Diving, Skiing&amp;Snowboarding<br>
+💻 A normal Cube Escaper and a poor CSGOer, lol</p>
+<h2 id="contact-me">📬 Contact me</h2>
+<p>📧 Email: <a href="mailto:zhaosweden1992@gmail.com">zhaosweden1992@gmail.com</a><br>
+🔗 Linkedin: <a href="https://www.linkedin.com/in/zhenyu-zhao-2926bbb9/">Zhenyu(Peak) Zhao</a></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#about-the-site">🏠 About the site</a></li>
+<li><a href="#who-is-me">👨‍💻 Who is me</a></li>
+<li><a href="#interests">⛹ Interests</a></li>
+<li><a href="#contact-me">📬 Contact me</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://peakzzy.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
